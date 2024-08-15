@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --purple-color: #6f42c1;
+  --light-color: #f8f9fa;
+}
+body {
+  background-color: var(--light-color);
+  font-family: "Rubik", sans-serif;
+}
+section {
+  background-color: var(--purple-color);
+  width: 50%;
+  text-align: center;
+  margin: 1rem auto;
+  padding: 1rem;
+  display: grid;
+  gap: 1rem;
+  border-radius: 6px;
+}
+h1 {
+  color: var(--light-color);
+  font-size: 2rem;
+  letter-spacing: 0.8px;
+}
+label {
+  margin: 0.5rem;
+  color: var(--light-color);
+}
+input:not([type="radio"]) {
+  margin-top: 0.5rem;
+  width: 100%;
+  outline: none;
+  padding: 0.3rem;
+  font-weight: 600;
+  font-size: 1rem;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+button {
+  cursor: pointer;
+  pointer-events: block;
+  padding: 0.7rem 1.2rem;
+  margin: auto;
+  color: var(--light-color);
+  border: none;
+  border-radius: 5px;
+}
+.AlertCmp {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #0a0a0ac8;
+  display: flex;
+}
+.AlertCmp p {
+  background-color: var(--light-color);
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 2rem 0;
+  border-radius: 7px;
+  margin: auto;
+  width: 80%;
+}
+
+@media screen and (width <= 576px) {
+  section{
+    width: 90% ;
+  }
+}
+@media screen and ( 577px <= width <= 768px) {
+  section{
+    width: 70% ;
+  }
+}
