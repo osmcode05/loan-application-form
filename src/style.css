@@ -5,18 +5,24 @@
   box-sizing: border-box;
 }
 :root {
-  --purple-color: #6f42c1;
+  --purple-color: #4615a3;
+  --Dark-purple-color: #260760;
   --light-color: #f8f9fa;
 }
 body {
   background-color: var(--light-color);
   font-family: "Rubik", sans-serif;
 }
+.main{
+  background-color: var(--Dark-purple-color);
+  display: flex;
+  min-height: 100vh;
+}
 section {
   background-color: var(--purple-color);
   width: 50%;
   text-align: center;
-  margin: 1rem auto;
+  margin:auto;
   padding: 1rem;
   display: grid;
   gap: 1rem;
@@ -59,7 +65,7 @@ button {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #0a0a0ac8;
+  background-color: #201e1ee2;
   display: flex;
 }
 .AlertCmp p {
