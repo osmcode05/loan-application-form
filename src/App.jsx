@@ -1,8 +1,9 @@
 import "./style.css";
 import { useState } from "react";
-import AlertCmp from "./AlertCmp";
+import AlertCmp, { DeleteInpsValue } from "./AlertCmp";
 
 export default function App() {
+  let [ShowAlert, setShowAlert] = useState(false);
   let [UserData, setUserData] = useState({
     name: "",
     phoneNumber: "",
@@ -10,8 +11,6 @@ export default function App() {
     isEmployee: "Yes",
     salary: "less than 500$",
   });
-
-  let [showAlert, setShowAlert] = useState(false);
 
   return (
     <main className="main">
@@ -101,18 +100,20 @@ export default function App() {
           onClick={() => setShowAlert(true)}
           onBlur={() => {
             setShowAlert(false);
-            setUserData({
-              name: "",
-              phoneNumber: "",
-              Age: "",
-              isEmployee: "Yes",
-              salary: "less than 500$",
-            });
+            if (DeleteInpsValue) {
+              setUserData({
+                name: "",
+                phoneNumber: "",
+                Age: "",
+                isEmployee: "Yes",
+                salary: "less than 500$",
+              });
+            }
           }}
         >
           Submit
         </button>
-        {showAlert && <AlertCmp UserData={UserData} />}
+        {ShowAlert && <AlertCmp UserData={UserData} />}
       </section>
     </main>
   );
