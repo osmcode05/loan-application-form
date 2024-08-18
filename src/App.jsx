@@ -102,10 +102,11 @@ export default function App() {
           onBlur={() => {
             setShowAlert(false);
             setUserData({
-              ...UserData,
               name: "",
               phoneNumber: "",
               Age: "",
+              isEmployee: "Yes",
+              salary: "less than 500$",
             });
           }}
         >
