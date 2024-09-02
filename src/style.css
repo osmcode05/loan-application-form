@@ -5,8 +5,7 @@
   box-sizing: border-box;
 }
 :root {
-  /* --purple-color: #4615a3; */
-  --purple-color: red;
+  --purple-color: #4615a3;
   --Dark-purple-color: #260760;
   --light-color: #f8f9fa;
 }
